@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Imagenes/LogoIncatep.jpg">
+    <title>INCATEP</title>
+    <!--font asome-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!--style css-->
+    <link rel="stylesheet" href="../stylesheet/style.css">
+</head>
+
+<body class="body_contact">
+    <header class="header">
+        <div class="header__logo--img">   
+            <img src="../Imagenes/LogoIncatep.jpg" alt="Logo Incatep">
+        </div>
+
+        <div class="header__logo--text">
+            <h1>INCATEP</h1>
+            <p>¡Capacitación de Alto Nivel Profesional!</p> 
+        </div>
+
+        <label for="menu" class="header__logo--btnMenu">
+            <i id="iconMenu" class="fa-solid fa-bars"></i>
+        </label>
+
+        <input type="checkbox" id="menu">
+
+        <nav class="header__nav">
+            <ul class="header__nav--ul">
+                <li> <a href="../index.html">INICIO</a></li>
+                <li><a href="../index.html#programas">PROGRAMAS</a></li>
+                <li> <a href="../index.html#quienessomos">QUIENES SOMOS</a></li>
+                <li> <a href="../index.html#testimonios">TESTIMONIOS</a></li>
+                <li> <a href="../index.html#convenios">CONVENIOS</a></li>
+                <li> <a href="../Pages/formContacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    
+    <main class="contact__main">
+
+        <div class="contact__tittle">
+            <h2>Contáctanos</h2>  
+        </div>
+
+        <form class="contact__form" action="/" method="post">
+            <div class="labels-inputs">
+                <p>Nombre:</p>
+                <input id="nombre" class="field" type="text" required placeholder="Ingrese su nombre">
+                
+                <p>Teléfono:</p>
+                <input id="telefono" class="field" type="number" required placeholder="Ingrese su teléfono">
+                
+                <p>Correo:</p>
+                <input id="correo" class="field" type="email" required placeholder="Ingrese su correo">
+                
+                <p>Mensaje:</p>
+                <textarea class="field"></textarea>
+            </div>
+  
+            <div class="btns">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpiar">
+            </div> 
+        </form>
+
+        <div class="contact__address">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d7804.821442015319!2d-77.09490217683137!3d-12.01522021595322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d-12.018490199999999!2d-77.0847077!4m5!1s0x9105ce84d2c588f1%3A0xe691a46d3b6bb975!2sC.%2030%2C%20Callao%2007036!3m2!1d-12.010130199999999!2d-77.09444529999999!5e0!3m2!1ses!2spe!4v1649185222314!5m2!1ses!2spe" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__social">
+            <img src="../Imagenes/whatsapp.png" alt="logo de whatsapp">
+            <img src="../Imagenes/instagram.png" alt="logo de Instagram">
+            <img src="../Imagenes/facebook.png" alt="logo de Facebook" >
+            <img src="../Imagenes/gmail.png" alt="logo de Gmail">
+            <img src="../Imagenes/youtube.png" alt="logo de Youtube">
+            <img src="../Imagenes/linkedin.png" alt="logo de Linedin">
+       </div>
+
+        <div class="footer__address">
+            <p>Jirón Los Jazmines 123 Lima</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
