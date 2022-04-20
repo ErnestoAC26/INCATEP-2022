@@ -544,7 +544,7 @@ background: linear-gradient(0deg, rgba(117,91,70,1) 0%, rgba(235,165,27,1) 100%)
 
 }
 
-/*-------------DIR PAGES: PROGRAMAS DE ESTUDIO----------------*/
+/*-------------DIR pages: PROGRAMAS DE ESTUDIO----------------*/
 .home__course{
     margin-top: 1rem;
 }
@@ -605,7 +605,7 @@ background: linear-gradient(0deg, rgba(117,91,70,1) 0%, rgba(235,165,27,1) 100%)
     }
 }
     
-/*-------------DIR PAGES: CONTACT FORM----------------*/
+/*-------------DIR pages: CONTACT FORM----------------*/
 .body_contact{
     display: grid;
     grid-template-rows: auto 1fr auto;
