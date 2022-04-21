@@ -23,140 +23,87 @@ html{
 
 }
 
-
 .body{
     height: 100%;
 }
 
 .header{
-    position: sticky;
-    top: 0;
-    z-index: 1;
+    height: 3.8rem;
     max-width: 100%;
-    display: grid;
-    grid-template-columns: 15% 79% 6%;
-    grid-template-rows: 4rem;
+    display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(211, 171, 71);
-    grid-template-areas:
-    "logo texto btn"
-    "nav nav nav";
-    background: rgb(235,165,27);
-    background: linear-gradient(0deg, rgba(235,165,27,1) 0%, rgba(117,91,70,1) 100%);
+    padding: .5rem 0px;
 }
 
 .header__logo--img{
-    grid-area: logo;
     height: 100%;
-    width: 100%;
+    width: 15%;
 }
 
 .header__logo--img img{
+    width: 100%;
     height: 100%;
-    
+    object-fit:contain;
 }
 
 .header__logo--text{
-    grid-area: texto;
+    height: 100%;
+    width: 85%;
     text-align: center;
 }
 
 .header__logo--text h1{
-    font-size: 1.5rem;
+    font-size:1.5rem;
+    margin: 0px;
 }
 
 .header__logo--text p{
-    font-size: 1rem;
+    font-size: .8rem;
+    margin: 0px;
 }
 
-.header__logo--btnMenu{
-    height: 100%;
-    grid-area: btn;
-    display: flex;
-    background: linear-gradient(0deg, rgba(235,165,27,1) 0%, rgba(186,159,137,1) 100%);
-    height: 100%;
-    align-items: center;
-    justify-content: center;
+/* Modificando Estilos para el Navbar del Bootstrap */
+#nav{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0px 0px;
 }
 
-input#menu{
-    display: none;
-}
-
-input#menu:checked ~ .header__nav{
-    display: flex;
-}
-
-.header__nav{
-    display: none;
-    grid-area: nav;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+#nav .nav-link{
+    font-size: .8rem;
     padding: .3rem;
-    background: radial-gradient(circle, rgba(245,242,230,1) 0%, rgba(57,55,54,1) 100%);
 }
 
-.header__nav--ul{
-    text-align: center;
-    height: 100%;
-}
-
-.header__nav--ul li{
-    list-style: none;
-    height: 100%;
-}
-
-.header__nav--ul li a{
-    text-decoration: none; 
-    color: black;
+#nav .container-fluid .navbar-brand{
     font-size: 1rem;
-    font-weight: bold;
-
 }
 
-@media screen and (min-width: 768px) {
+#nav .dropdown-menu{
+    padding: 0px;
+}
 
-    .header__nav{
-        padding: 0;
-        height: 100%;
-    }
+#nav .dropdown-menu .dropdown-item{
+    padding: .1rem .8rem;
+    font-size: .7rem;
+}
 
-    .header__nav--ul{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
+#nav .dropdown-menu .dropdown-divider{
+    margin: 0px;
+}
+
+
+@media screen and (min-width: 1024px) {
+    #navbar-nav--flex{
         justify-content: space-around;
+        width: 100%;
     }
 
-    .header__nav--ul li{
-        padding: .3rem;
-    }
-
-    .header__nav--ul li a{
-        font-size: .8rem;
-    } 
-}
-
-
-@media screen and (min-width: 1280px) {
-    .header__nav{
-        display: flex;
-    }
-
-    .header__nav--ul li:hover{
-        background-color: white;
-    } 
-
-    .header__nav--ul li a:hover{
-        font-size: .9rem;
-    } 
-
-    
-    .header__logo--btnMenu{
+    #nav .container-fluid .navbar-brand{
         display: none;
     }
+
 }
 
 /*---------Estilos para el Main-----------*/
@@ -165,7 +112,7 @@ input#menu:checked ~ .header__nav{
     height: 30%;
     width: 100%;
     text-align: center;
-    margin-bottom: .8rem;
+    margin-bottom: 2rem;
  
 }
 
@@ -183,49 +130,32 @@ input#menu:checked ~ .header__nav{
 /*---Programas de Estudio---*/
 
 .home__programs{
-    max-width: 100%;
-    display: grid;
-    align-items: center;
-    grid-template-rows: 30px repeat(4, 1fr);
-    margin-bottom: 50px;
-    grid-row-gap: .5rem;
-    justify-items: center;
+    margin-bottom: 2rem;
 }
 
 .home__programs h2{
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
-.home__programs--course{
-    position: relative;
-    display: inline-block;
-    height: 100%;
-    width: 80%;
-    border: 1px black solid;
-    background-color: midnightblue;
-    padding: 3px;
-    text-align: center;
-}
-    
-.home__programs--course img{
-    height: 100%;
-    width: 100%;
+#carouselExampleIndicators{
+    display: flex;
+    justify-content: center;
 }
 
-.home__programs--course a{
+.carousel-item a{
     text-decoration: none;
     color: white;
-    font-size: 1.2rem;
-    background-color: rgb(122, 141, 194);
-    width: 98%;
-    display: block;
+    font-size: 1rem;
+    background-color: rgb(180, 176, 176);
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+    text-align: center;
 }
+
 
 @media screen and (min-width: 768px) {
     .home__programs{
@@ -252,6 +182,26 @@ input#menu:checked ~ .header__nav{
 
 } 
 
+@media screen and (min-width: 1024px){
+    .carouselExampleIndicators{
+        width: 500px;
+    }
+
+    .carousel-inner{
+        width: 70%;
+        border-radius: 10px;
+    }
+
+    .carousel-control-prev{
+        margin-left: 10%;
+    }
+
+    .carousel-control-next{
+        margin-right: 10%;
+    }
+}
+
+
 @media screen and (min-width: 1280px){
     .home__programs{
         grid-template-columns: repeat(4,1fr);
@@ -263,7 +213,7 @@ input#menu:checked ~ .header__nav{
         grid-area: titulo;
     }
 
-}
+} 
 
 /*---Porqué INCATEP---*/
 
@@ -272,36 +222,36 @@ input#menu:checked ~ .header__nav{
     display: grid;
     align-items: center;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: 1rem 1fr;
+    grid-template-rows: auto repeat(2,1fr);
     grid-template-areas:
     "titulo titulo";
-    margin-bottom: 50px;
-    row-gap: 2rem;
+    margin-bottom: 2rem;
+    row-gap: 1rem;
     justify-items: center;
 }
 
 .home__reasons h2{
     grid-area: titulo;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .home__reasons--badge{
+   
     padding: 5px;
-    height: 100%;
-    width: 60%;
-    border: 5px darkgray solid;
+    height: 90%;
+    width: 8rem;
+    border: 4px darkgray solid;
     border-radius: 1rem;
     text-align: center;
 }
 
 .home__reasons--badge #icon{
-    font-size:4rem;
+    font-size:3rem;
     color: rgb(194, 148, 33);
-    
 }
 
 .home__reasons--badge p{
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: bold;
 }
 
@@ -334,10 +284,23 @@ input#menu:checked ~ .header__nav{
     row-gap: 20px;
 }
 
+.home__MissionVision h2{
+    font-size: 1.2rem;
+}
+
+.home__MissionVision-Flex{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+}
+
 .home__MissionVision-container{
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 22rem;
     justify-content: center;
     border: 3px gray solid;
     border-radius:10px;
@@ -359,26 +322,23 @@ input#menu:checked ~ .header__nav{
 
 .home__MissionVision-text p{
     padding: 5px;
-    font-size: 1rem;
+    font-size: .8rem;
     background-color: rgb(216, 215, 215);
 }
 
 .home__MissionVision-container h3{
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 5px 0px;
 }
 
 @media screen and (min-width: 1024px) {
-    .home__MissionVision{
+    .home__MissionVision-Flex{
+        display: flex;
         flex-direction: row;
-        column-gap: 30px;
-        justify-content: center;
+        column-gap: 10%;
     }
 
-    .home__MissionVision-container{
-        width: 40%;
-    }
 
 }
 
@@ -399,14 +359,14 @@ input#menu:checked ~ .header__nav{
 
 .home__testimony h2{
     grid-area: titulo;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .home__testimony-container{
     display: flex;
     flex-direction: column;
     background-color:rgb(177, 174, 174);
-    width: 8rem;
+    width: 10rem;
     height: 100%;
     text-align: center;
     border-radius: 1rem;
@@ -437,24 +397,53 @@ input#menu:checked ~ .header__nav{
     padding: 0px .3rem .3rem .3rem;
 }
 
+@media screen and (min-width: 768px){
+
+    .home__testimony-container{
+        width: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 2rem 2rem 8rem;
+        grid-template-areas:
+            "nombre nombre"
+            "foto cargo"
+            "foto test";
+        
+    }
+    
+    .home__testimony-container h3{
+        grid-area: nombre;
+    }
+
+    .home__testimony-container--img{
+        grid-area: foto;
+    }
+
+    .home__testimony-container h4{
+        grid-area: cargo;
+    }
+
+    .home__testimony-container p{
+        grid-area:test
+    }
+}
 
 @media screen and (min-width: 1024px){
-    .home__testimony{
-        grid-template-columns: repeat(4,1fr);
-        grid-template-rows: 2rem 1fr;
-        grid-template-areas:
-        "titulo titulo titulo titulo";
+    .home__testimony-container{
+        width: 80%;
+        
     }
 }
 
 
 /*---CONVENIOS---*/
+
 .home__convenios{
     margin-bottom: 50px;
 }
 
 .home__convenios h2{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
 }
 
@@ -557,7 +546,7 @@ background: linear-gradient(0deg, rgba(117,91,70,1) 0%, rgba(235,165,27,1) 100%)
 
 .programs-container h3{
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin: .8em 0px;
     color:rgb(12, 12, 73);
 }
@@ -616,7 +605,7 @@ background: linear-gradient(0deg, rgba(117,91,70,1) 0%, rgba(235,165,27,1) 100%)
     margin-top: 1rem;
     display: grid;
     grid-template-rows: auto repeat(2,1fr);
-    grid-template-columns: 100%;
+    grid-template-columns: 0.9fr;
     justify-content: center;
     align-items: center;
     row-gap: 1rem;
@@ -669,7 +658,7 @@ background: linear-gradient(0deg, rgba(117,91,70,1) 0%, rgba(235,165,27,1) 100%)
 }
 
 .contact__form .btns input{
-    width: 30%;
+    width: 6rem;
     font-size: .9rem;
     padding: .2rem;
     border-radius: 5px;
@@ -694,7 +683,7 @@ background: linear-gradient(0deg, rgba(117,91,70,1) 0%, rgba(235,165,27,1) 100%)
 @media screen and (min-width: 1024px) {
      .contact__main{
         grid-template-rows: auto 1fr;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2,0.8fr);
         grid-template-areas:  
         "titulo titulo"
         "form mapa";

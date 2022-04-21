@@ -8,6 +8,9 @@
     <title>INCATEP</title>
     <!--font asome-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+
     <!--style css-->
     <link rel="stylesheet" href="stylesheet/style.css">
 </head>
@@ -21,52 +24,105 @@
 
         <div class="header__logo--text">
             <h1>INCATEP</h1>
-            <p>¡Capacitación de Alto Nivel Profesional!</p> 
+            <p>Capacitación de Alto Nivel Profesional</p> 
         </div>
-
-        <label for="menu" class="header__logo--btnMenu">
-            <i id="iconMenu" class="fa-solid fa-bars"></i>
-        </label>
-
-        <input type="checkbox" id="menu">
-
-        <nav class="header__nav">
-            <ul class="header__nav--ul">
-                <li> <a href="index.html">INICIO</a></li>
-                <li><a href="#programas">PROGRAMAS</a></li>
-                <li> <a href="#quienessomos">QUIENES SOMOS</a></li>
-                <li> <a href="#testimonios">TESTIMONIOS</a></li>
-                <li> <a href="#convenios">CONVENIOS</a></li>
-                <li> <a href="./pages/formContacto.html">CONTACTO</a></li>
-            </ul>
-        </nav>
-        
     </header>
+
+    <!--NavBar Bootstrap-->
+    <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Menú</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul id="navbar-nav--flex" class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#programas" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Programas
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="pages/progAdministracion.html">Administración</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="pages/progInformatica.html">Derecho</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="pages/progDerecho.html">Informática</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="pages/progSalud.html">Salud</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quienessomos">Quienes Somos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonios">Testimonios</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#convenios">Convenios</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/formContacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <main class="home">
 
         <section class="home__image">
-            <img src="imagenes/Principal.jpg" alt="imagen principal de la web" height="100" width="200">
+            <img src="imagenes/Principal2.jpg" alt="imagen principal de la web" height="100" width="200">
         </section>
         
         <section id="programas" class="home__programs">
             <h2>Programas de Estudio</h2>
             
-            <div class="home__programs--course">  
-                <img src="imagenes/LogoAdmin.jpg" alt="logo del programa de administración">  
-                <a href="pages/progAdministracion.html">Administración</a>
-            </div>
-            <div class="home__programs--course">
-                <img src="imagenes/LogoInformatica.jpg" alt="logo del programa de informatica">
-                <a href="pages/progInformatica.html">Informática</a>
-            </div>
-            <div class="home__programs--course">
-                <img src="imagenes/LogoDerecho.jpg" alt="logo del programa de derecho">
-                <a href="pages/progDerecho.html">Derecho</a>
-            </div>
-            <div class="home__programs--course">
-                <img src="imagenes/LogoSalud.png" alt="logo del programa de salud">
-                <a href="pages/progSalud.html">Salud</a>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="imagenes/LogoAdmin.jpg" class="d-block w-100" alt="...">
+                    <a href="./pages/progAdministracion.html">Administración</a>        
+                  </div>
+                  <div class="carousel-item">
+                    <img src="imagenes/LogoDerecho.jpg" class="d-block w-100" alt="...">
+                    <a href="./pages/progAdministracion.html">Derecho</a>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="imagenes/LogoInformatica.jpg" class="d-block w-100" alt="...">
+                    <a href="./pages/progAdministracion.html">Informática</a>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="imagenes/LogoSalud.png" class="d-block w-100" alt="...">
+                    <a href="./pages/progAdministracion.html">Salud</a>
+                  </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+
             </div>
             
         </section>
@@ -97,22 +153,23 @@
         </aside>
         
         <section id="quienessomos" class="home__MissionVision">
+            <h2>Misión y Visión</h2>
 
-            <div class="home__MissionVision-container">
-                <h3>Misión</h3>
-                <div class="home__MissionVision-text">
-                    <img src="imagenes/imgMision.jpg" alt="Imagen de la misión de la empresa">    
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cupiditate incidunt omnis, laborum earum sint rerum porro dolores repudiandae molestiae laudantium doloremque recusandae commodi fugiat enim alias repellat maxime quis.</p>
+            <div class="home__MissionVision-Flex">
+                <div class="home__MissionVision-container">
+                    <h3>Misión</h3>
+                    <div class="home__MissionVision-text">
+                        <img src="imagenes/imgMision.jpg" alt="Imagen de la misión de la empresa">    
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cupiditate incidunt omnis, laborum earum sint rerum porro dolores repudiandae molestiae laudantium doloremque recusandae commodi fugiat enim alias repellat maxime quis.</p>
+                    </div>  
                 </div>
                 
-                
-            </div>
-            
-            <div class="home__MissionVision-container">
-                <h3>Visión</h3>
-                <div class="home__MissionVision-text">
-                    <img src="imagenes/imgVision.jpg" alt="Imagen de la visión de la empresa">    
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cupiditate incidunt omnis, laborum earum sint rerum porro dolores repudiandae molestiae laudantium doloremque recusandae commodi fugiat enim alias repellat maxime quis.</p>
+                <div class="home__MissionVision-container">
+                    <h3>Visión</h3>
+                    <div class="home__MissionVision-text">
+                        <img src="imagenes/imgVision.jpg" alt="Imagen de la visión de la empresa">    
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cupiditate incidunt omnis, laborum earum sint rerum porro dolores repudiandae molestiae laudantium doloremque recusandae commodi fugiat enim alias repellat maxime quis.</p>
+                    </div>
                 </div>
             </div>
 
@@ -189,7 +246,7 @@
         </div>
 
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 
