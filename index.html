@@ -79,13 +79,14 @@
     <main class="home">
 
         <section class="home__image">
-            <img src="imagenes/Principal2.jpg" alt="imagen principal de la web" height="100" width="200">
+            <img src="imagenes/Principal2.jpg" alt="imagen principal de la web">
         </section>
         
-        <section id="programas" class="home__programs">
+        <section class="home__programs">
             <h2>Programas de Estudio</h2>
             
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <!--Carrousel Bootstrap-->
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -95,19 +96,19 @@
                 </div>
 
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
+                  <div class="carousel-item active" data-bs-interval="3000">
                     <img src="imagenes/LogoAdmin.jpg" class="d-block w-100" alt="...">
                     <a href="./pages/progAdministracion.html">Administración</a>        
                   </div>
-                  <div class="carousel-item">
+                  <div class="carousel-item" data-bs-interval="3000">
                     <img src="imagenes/LogoDerecho.jpg" class="d-block w-100" alt="...">
                     <a href="./pages/progAdministracion.html">Derecho</a>
                   </div>
-                  <div class="carousel-item">
+                  <div class="carousel-item" data-bs-interval="3000">
                     <img src="imagenes/LogoInformatica.jpg" class="d-block w-100" alt="...">
                     <a href="./pages/progAdministracion.html">Informática</a>
                   </div>
-                  <div class="carousel-item">
+                  <div class="carousel-item" data-bs-interval="3000">
                     <img src="imagenes/LogoSalud.png" class="d-block w-100" alt="...">
                     <a href="./pages/progAdministracion.html">Salud</a>
                   </div>
@@ -130,26 +131,28 @@
         <aside class="home__reasons">
             <h2>Porque INCATEP</h2>
 
-            <div class="home__reasons--badge">
-                <i id="icon" class="fa-solid fa-medal"></i>
-                <p>5 años de experiencia</p>
-            </div>
+            <div class="home__reasons-container">
+                <div class="home__reasons--badge">
+                    <i id="icon" class="fa-solid fa-medal"></i>
+                    <p>5 años de experiencia</p>
+                </div>
             
-            <div class="home__reasons--badge">
-                <i id="icon" class="fa-solid fa-laptop"></i>
-                <p>Cursos virtuales</p>
+                <div class="home__reasons--badge">
+                    <i id="icon" class="fa-solid fa-laptop"></i>
+                    <p>Cursos virtuales</p>
+                </div>
+                
+                <div class="home__reasons--badge">
+                    <i id="icon" class="fa-solid fa-graduation-cap"></i>
+                    <p>Más de 1200 alumnos</p>
+                </div>
+                
+                <div class="home__reasons--badge">
+                    <i id="icon" class="fa-solid fa-briefcase"></i>
+                    <p>El 75% están laborando</p>
+                </div>
             </div>
-            
-            <div class="home__reasons--badge">
-                <i id="icon" class="fa-solid fa-graduation-cap"></i>
-                <p>Más de 1200 alumnos</p>
-            </div>
-            
-            <div class="home__reasons--badge">
-                <i id="icon" class="fa-solid fa-briefcase"></i>
-                <p>El 75% están laborando</p>
-            </div>
-          
+                
         </aside>
         
         <section id="quienessomos" class="home__MissionVision">
@@ -158,18 +161,18 @@
             <div class="home__MissionVision-Flex">
                 <div class="home__MissionVision-container">
                     <h3>Misión</h3>
-                    <div class="home__MissionVision-text">
-                        <img src="imagenes/imgMision.jpg" alt="Imagen de la misión de la empresa">    
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cupiditate incidunt omnis, laborum earum sint rerum porro dolores repudiandae molestiae laudantium doloremque recusandae commodi fugiat enim alias repellat maxime quis.</p>
-                    </div>  
+                    
+                    <img src="imagenes/imgMision.jpg" alt="Imagen de la misión de la empresa">    
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cupiditate incidunt omnis, laborum earum sint rerum porro dolores repudiandae molestiae laudantium doloremque recusandae commodi fugiat enim alias repellat maxime quis.</p>
+
                 </div>
                 
                 <div class="home__MissionVision-container">
                     <h3>Visión</h3>
-                    <div class="home__MissionVision-text">
-                        <img src="imagenes/imgVision.jpg" alt="Imagen de la visión de la empresa">    
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cupiditate incidunt omnis, laborum earum sint rerum porro dolores repudiandae molestiae laudantium doloremque recusandae commodi fugiat enim alias repellat maxime quis.</p>
-                    </div>
+                
+                    <img src="imagenes/imgVision.jpg" alt="Imagen de la visión de la empresa">    
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cupiditate incidunt omnis, laborum earum sint rerum porro dolores repudiandae molestiae laudantium doloremque recusandae commodi fugiat enim alias repellat maxime quis.</p>
+                    
                 </div>
             </div>
 
@@ -180,36 +183,36 @@
             <h2>TESTIMONIOS</h2>
             
             <div class="home__testimony-container">
-                <h3>María</h3>
+                <h3 class="home__testimony-container--text">María</h3>
                 <div class="home__testimony-container--img">
                     <img src="imagenes/Maria.jpg" alt="foto de Maria">
                 </div>
-                <h4>Administradora</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio in ipsam possimus quidem laborum hic accusantium est.</p>
+                <h4 class="home__testimony-container--text">Administradora</h4>
+                <p class="home__testimony-container--text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio in ipsam possimus quidem laborum hic accusantium est.</p>
             </div>
             <div class="home__testimony-container">
-                <h3>José</h3>
+                <h3 class="home__testimony-container--text">José</h3>
                 <div class="home__testimony-container--img">
                     <img src="imagenes/Jose.jpg" alt="foto de Jose">
                 </div>
-                <h4>Contador</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio in ipsam possimus quidem laborum hic accusantium est.</p>
+                <h4 class="home__testimony-container--text">Contador</h4>
+                <p class="home__testimony-container--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio in ipsam possimus quidem laborum hic accusantium est.</p>
             </div>
             <div class="home__testimony-container">
-                <h3>Carlos</h3>
+                <h3 class="home__testimony-container--text">Carlos</h3>
                 <div class="home__testimony-container--img">
                     <img src="imagenes/Carlos.jpg" alt="foto de Carlos">
                 </div>
-                <h4>Abogado</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio in ipsam possimus quidem laborum hic accusantium est.</p>
+                <h4 class="home__testimony-container--text">Abogado</h4>
+                <p class="home__testimony-container--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio in ipsam possimus quidem laborum hic accusantium est.</p>
             </div>
             <div class="home__testimony-container">
-                <h3>Alonso</h3>
+                <h3 class="home__testimony-container--text">Alonso</h3>
                 <div class="home__testimony-container--img">
                     <img src="imagenes/Alonso.jpg" alt="foto de Alonso">
                 </div>
-                <h4>Doctor</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio in ipsam possimus quidem laborum hic accusantium est.</p>
+                <h4 class="home__testimony-container--text">Doctor</h4>
+                <p class="home__testimony-container--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio in ipsam possimus quidem laborum hic accusantium est.</p>
             </div>
             
             
