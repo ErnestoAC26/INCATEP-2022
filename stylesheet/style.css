@@ -66,6 +66,26 @@ html{
     text-shadow: #bebfc0 0.1em 0.1em 0.1em
 }
 
+.form-check{
+    height: 100%;
+    display: flex;
+    justify-content:end;
+    align-items: flex-end;
+    width: 11%;
+    margin-right: 10px;
+}
+
+.form-check-input{
+    height: .7rem;
+    margin: 0px 10px 8px 0px;
+}
+
+.form-check #flexSwitchCheckDefault{
+    width: 1.5rem;
+}
+
+
+
 /* Modificando Estilos para el Navbar del Bootstrap */
 #nav{
     position: sticky;
@@ -517,7 +537,6 @@ html{
 
 .footer__social img:hover{
     border: 0px
-    
 }
 
 .footer__address{
@@ -610,7 +629,6 @@ html{
     color: yellow;
     background-color: black;
     border-radius: 50%;
-   
 
 }
 
@@ -737,4 +755,9 @@ html{
         grid-area: mapa;
     }
  
+}
+
+body.darkmode{
+    /* background-color: rgb(32, 32,44);
+    color: white; */
 }

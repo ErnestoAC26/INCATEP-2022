@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!--font asome-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!--style css-->
+    <link rel="stylesheet" href="../stylesheet/styleLogin.css">
+</head>
+<body>
+    <header>
+        <h1>BIENVENIDO</h1>
+    </header>
+
+    <main>
+        <form>
+            
+            <div class="container-head">
+                
+                <header>
+                    <img src="../imagenes/LogoIncatep.jpg" alt="Logo Incatep" >
+                    <p>Ingrese su usuario y contraseña</p>
+                </header>
+                
+            </div>
+
+            <div class="container-field">
+                
+                <div class="container-field-text">
+                    <!--   user name -->
+                    <div class="input-item">
+                        <i class="fa fa-user-circle"></i>
+                    </div>
+                    <!--   user name Input-->
+                    <input class="form-input" id="txt-input" type="text" placeholder="@Usuario" required>
+                </div>
+                
+                <div class="container-field-text">
+                    <!--   Password -->
+                    <div class="input-item">
+                        <i class="fa fa-key"></i>
+                    </div>
+                    <!--   Password Input-->
+                    <input class="form-input" type="password" placeholder="Contraseña" id="pwd"  name="password" required>
+                    <!--Sh password  -->
+                    <div id="eye" class="input-item">
+                        <i class="fa fa-eye" aria-hidden="true"  type="button"></i>
+                    </div>
+                </div>
+
+                <!--  button LogIn -->
+                <button class="log-in">Ingresar</button>
+
+            </div>
+            
+            <!--   other buttons -->
+            <div class="other">
+            <!--      Forgot Password button-->
+                <button class="btn submits frgt-pass">Olvidó Contraseña</button>
+            <!--     Sign Up button -->
+                <button class="btn submits sign-up">Registrarse 
+                <!-- Sign Up font icon -->
+                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                </button>
+            <!--      End Other the Division -->
+            </div>
+
+        </form>
+       
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        function show() {
+            var p = document.getElementById('pwd');
+            p.setAttribute('type', 'text');
+        }
+
+        function hide() {
+            var p = document.getElementById('pwd');
+            p.setAttribute('type', 'password');
+        }
+
+        var pwShown = 0;
+
+        document.getElementById("eye").addEventListener("click", function () {
+            if (pwShown == 0) {
+                pwShown = 1;
+                show();
+            } else {
+                pwShown = 0;
+                hide();
+            }
+        }, false);
+    </script>
+
+</body>
+</html>
