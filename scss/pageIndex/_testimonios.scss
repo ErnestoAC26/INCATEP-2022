@@ -13,7 +13,8 @@
 
     h2{
         grid-area: titulo;
-        font-size: 1.2rem;
+        @include SubTittileh2;
+
     }
 
     .home__testimony-container{

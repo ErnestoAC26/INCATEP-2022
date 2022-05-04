@@ -5,8 +5,8 @@
     margin-bottom: 4rem;
 
     h2{
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
+        @include SubTittileh2;
+
     }
 
     .home__MissionVision-Flex{

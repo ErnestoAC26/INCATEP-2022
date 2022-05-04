@@ -3,10 +3,8 @@
 /* End Fonts */
 
 @import 'variables';
-
+@import 'mixin';
 @import 'general';
-
-
 /*----------ESTILOS HEADER----------*/
 
 @import 'header';
@@ -20,6 +18,10 @@
     text-align: center;
     margin-bottom: 4rem;
     
+    @media screen and (min-width: 1280px) {
+        height: 90vh;
+    }
+
     img{
         width: 100%;
         height: 100%;
@@ -27,40 +29,34 @@
 }
 
 
-@media screen and (min-width: 1280px) {
-    .home__image{
-        height: 90vh;
-    }
-}
+@import 'pageIndex/programas';
 
-@import 'programas';
+@import 'pageIndex/incatep';
 
-@import 'incatep';
+@import 'pageIndex/misionvision';
 
-@import 'misionvision';
+@import 'pageIndex/testimonios';
 
-@import 'testimonios';
-
-@import 'convenios';
+@import 'pageIndex/convenios';
 
 /*----------FIN ESTILOS PAGE INDEX-----------*/
 
 
 /*----------ESTILOS PAGE PROGRAMAS DE ESTUDIO-----------*/
 
-@import 'programasEstudio';
+@import 'pageProgramas/programasEstudio';
 
 /*----------FIN ESTILOS PAGE PROGRAMAS DE ESTUDIO-----------*/
 
 /*----------ESTILOS PAGE CONTACTO-----------*/
 
-@import 'contacto';
+@import 'pageContacto/contacto';
 
 /*----------FIN ESTILOS PAGE CONTACTO-----------*/
 
 /*----------ESTILOS PAGE ALUMNO-----------*/
 
-@import 'alumno';
+@import 'pageAlumno/alumno';
 
 /*----------FIN ESTILOS PAGE ALUMNO-----------*/
 

@@ -1,0 +1,107 @@
+.body_contact{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+
+    .contact__main{
+        margin-top: 1rem;
+        display: grid;
+        grid-template-rows: auto repeat(2,1fr);
+        grid-template-columns: 0.9fr;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
+        padding: 1rem;
+
+        @media screen and (min-width: 1024px) {
+            grid-template-rows: auto 1fr;
+            grid-template-columns: repeat(2,0.8fr);
+            grid-template-areas:  
+            "titulo titulo"
+            "form mapa";
+        }
+
+        .contact__tittle{
+            grid-area: titulo;
+
+            h2{
+                @include SubTittileh2;
+
+            }
+        }
+
+        .contact__form{
+            background-color: bisque;
+            padding: .5rem;
+            border-radius: 1rem;
+            background: rgb(173,187,242);
+            background: linear-gradient(90deg, rgba(173,187,242,1) 0%, rgba(107,104,134,1) 98%);
+            grid-area: form;
+
+            .labels-inputs{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                justify-items: center;
+
+                p{
+                    margin-top: 1rem;
+                    font-size: 1.2rem;
+                }
+
+
+                input{
+                    font-size: 1rem;
+                    border: 1px solid gray;
+                    border-radius: 5px;
+                }
+
+                textarea{
+                    height: 3rem;
+                    border: 1px solid gray;
+                    border-radius: 5px;
+                    resize: none;
+                }
+
+            }
+
+
+            .btns{
+                padding: 1rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+
+                input{
+                    width: 6rem;
+                    font-size: .9rem;
+                    padding: .2rem;
+                    border-radius: 5px;
+
+                    &:hover{
+                        background-color: rgb(161, 159, 159);
+                    }
+                }
+                
+            }
+
+        }
+
+        .contact__address{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            grid-area: mapa;
+
+            iframe{
+                width: 90%;
+                height: 100%;
+            }
+            
+        }
+
+
+    }
+
+
+}
