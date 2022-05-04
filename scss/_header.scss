@@ -1,0 +1,122 @@
+
+@media screen and (min-width: 768px) {
+    
+    html{font-size: 22px;}
+
+}
+
+
+.body{
+    height: 100%;
+}
+
+.header{
+    height: 3.8rem;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    padding: .5rem 0px;
+
+    .header__logo--img{
+        height: 100%;
+        width: 15%;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit:contain;
+        }
+    }   
+
+
+    .header__logo--text{
+        height: 100%;
+        width: 74%;
+        text-align: center;
+        
+        h1{
+            font-size:1.5rem;
+            margin: 0px;
+            color: $ColorYellowTittle;
+            text-shadow: #212529 0.1em 0.1em 0.2em
+        }
+
+        p{
+            font-size: .8rem;
+            margin: 0px;
+            text-shadow: #bebfc0 0.1em 0.1em 0.1em
+        }
+
+    }
+
+    .form-check{
+        height: 100%;
+        display: flex;
+        justify-content:end;
+        align-items: flex-end;
+        width: 11%;
+        margin-right: 10px;
+
+        input{
+            height: .7rem;
+            margin: 0px 10px 8px 0px;
+            width: 1.5rem;
+        }
+
+
+    }
+
+
+}
+
+
+
+/* Modificando Estilos para el Navbar del Bootstrap */
+#nav{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0px 0px;
+
+    .navbar-brand{
+        font-size: 1rem;
+
+        @media screen and (min-width: 1024px) {
+            display: none;
+        }
+    }
+
+    
+    .nav-link{
+        font-size: .8rem;
+        padding: .3rem;
+
+        &:hover{
+            color: aliceblue;
+            text-shadow: yellow 0.1em 0.1em 0.8em
+        }
+    }
+
+    .dropdown-menu{
+        padding: 0px;
+
+        .dropdown-item{
+            padding: .1rem .8rem;
+            font-size: .7rem;
+        }
+
+        .dropdown-divider{
+            margin: 0px;
+        }
+    }
+    
+    @media screen and (min-width: 1024px) {
+        #navbar-nav--flex{
+            justify-content: space-around;
+            width: 100%;
+        }
+    
+    }
+
+}
+

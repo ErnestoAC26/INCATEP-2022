@@ -1,0 +1,65 @@
+/*----------ESTILOS MISION VISION----------*/
+.home__MissionVision{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 4rem;
+
+    h2{
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .home__MissionVision-Flex{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 2rem;
+
+        @media screen and (min-width: 1024px){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .home__MissionVision-container{
+            height:24rem;
+            display: flex;
+            flex-direction: column;
+            width: 24rem;
+            justify-content: center;
+            border: 3px gray solid;
+            border-radius:10px;
+            box-shadow: 0px 15px 10px 0px rgb(218, 216, 216);
+            
+            @media screen and (min-width: 1024px){
+                width: 45%;
+            }
+
+            h3{
+                font-weight: bold;
+                font-size: 1.2rem;
+                margin: .5rem;
+                text-shadow: 0px 5px 10px rgb(218, 216, 216);
+            }
+
+            img{
+                height: 15rem;
+                width: 100%
+            }
+
+            p{
+                margin: .5rem;
+                font-size: .8rem;
+            }
+
+        }  
+
+    }
+
+
+}
+
+
+/*----------FIN ESTILOS MISION VISION----------*/

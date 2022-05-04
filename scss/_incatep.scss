@@ -1,0 +1,67 @@
+/*----------ESTILOS PORQUE INCATEP----------*/
+.home__reasons{
+    margin-bottom: 4rem;
+
+    h2{
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    @media screen and (min-width: 1024px) {
+        margin-bottom: 8rem;
+        margin-top: 8rem;  
+    }
+
+    .home__reasons-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
+        
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            column-gap: 1rem;
+            padding: 0px 1rem;
+            justify-content: space-around;
+        }
+
+        .home__reasons--badge{
+            display: flex;
+            flex-direction: column;
+            height: 8rem;
+            width: 8rem;
+            border: 4px darkgray solid;
+            border-radius: 1rem;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 0px 5px 5px rgb(192, 191, 191);
+            
+            @media screen and (min-width: 768px) {
+                box-shadow: 0px 0px 20px 10px rgb(192, 191, 191);
+            }
+
+            #icon{
+                font-size:3rem;
+                color: rgb(194, 148, 33);
+            }
+
+            p{
+                font-size: .8rem;
+                font-weight: bold;
+                margin: 0;
+                text-align: center;
+            }
+
+
+        }
+
+    }
+
+}
+
+
+
+/*--------FIN ESTILOS PORQUE INCATEP--------*/
+

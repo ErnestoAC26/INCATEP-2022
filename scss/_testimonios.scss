@@ -1,0 +1,93 @@
+/*----------ESTILOS TESTIMONIOS----------*/
+.home__testimony{
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 2rem repeat(2,auto);
+    grid-template-areas:
+    "titulo titulo";
+    justify-items:center;
+    gap: 1rem;
+
+    h2{
+        grid-area: titulo;
+        font-size: 1.2rem;
+    }
+
+    .home__testimony-container{
+        display: flex;
+        flex-direction: column;
+        background: radial-gradient(circle, rgba(215,218,230,1) 0%, rgba(155,151,171,1) 98%);
+        width: 10rem;
+        height: 100%;
+        text-align: center;
+        border-radius: 1rem;
+        padding: .3rem;
+        
+        @media screen and (min-width: 768px){
+            width: auto;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: 2rem 2rem 8rem;
+            grid-template-areas:
+                "nombre nombre"
+                "foto cargo"
+                "foto test";
+        }
+
+        @media screen and (min-width: 1024px){
+            width: 80%;
+        }
+
+        &:hover{
+            background: rgba(64, 64, 70,0.8);
+            &:hover > .home__testimony-container--img > img{
+                transform: scale(1.1) rotate(3deg);
+            }
+
+            &:hover .home__testimony-container--text{
+                color: white;
+            }
+        }
+
+        h3{
+            font-size: 1rem;
+            padding: .3rem;
+            grid-area: nombre;
+        }
+
+        
+
+        .home__testimony-container--img{
+            height: 8rem;
+            grid-area: foto;
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        h4{
+            font-size: .8rem;
+            padding: .3rem;
+            grid-area: cargo;
+        }
+
+
+        p{
+            font-size: .7rem;
+            padding: 0px .3rem .3rem .3rem;
+            grid-area:test
+        }
+
+
+    }
+
+}
+
+
+/*----------FIN ESTILOS TESTIMONIOS----------*/
