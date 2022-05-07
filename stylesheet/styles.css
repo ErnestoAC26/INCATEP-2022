@@ -222,8 +222,8 @@ html {
       height: 24rem;
       display: flex;
       flex-direction: column;
-      width: 24rem;
-      justify-content: center;
+      width: 22rem;
+      justify-content: flex-start;
       border: 3px gray solid;
       border-radius: 10px;
       box-shadow: 0px 15px 10px 0px #dad8d8; }
@@ -236,11 +236,11 @@ html {
         margin: .5rem;
         text-shadow: 0px 5px 10px #dad8d8; }
       .home__MissionVision .home__MissionVision-Flex .home__MissionVision-container img {
-        height: 15rem;
+        height: 13rem;
         width: 100%; }
       .home__MissionVision .home__MissionVision-Flex .home__MissionVision-container p {
         margin: .5rem;
-        font-size: .8rem; }
+        font-size: .72em; }
 
 /*----------FIN ESTILOS MISION VISION----------*/
 /*----------ESTILOS TESTIMONIOS----------*/
@@ -260,11 +260,12 @@ html {
     text-align: center;
     margin-bottom: 2rem; }
   .home__testimony .home__testimony-container {
+    justify-content: flex-start;
     display: flex;
     flex-direction: column;
     background: radial-gradient(circle, #d7dae6 0%, #9b97ab 98%);
     width: 10rem;
-    height: 100%;
+    height: auto;
     text-align: center;
     border-radius: 1rem;
     padding: .3rem; }
@@ -273,11 +274,11 @@ html {
         width: auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 2rem 2rem 8rem;
-        grid-template-areas: "nombre nombre" "foto cargo" "foto test"; } }
+        grid-template-rows: 2rem 2rem auto;
+        grid-template-areas: "nombre nombre" "cargo cargo" "foto test"; } }
     @media screen and (min-width: 1024px) {
       .home__testimony .home__testimony-container {
-        width: 80%; } }
+        width: 70%; } }
     .home__testimony .home__testimony-container:hover {
       background: rgba(64, 64, 70, 0.8); }
       .home__testimony .home__testimony-container:hover:hover > .home__testimony-container--img > img {
@@ -289,7 +290,7 @@ html {
       padding: .3rem;
       grid-area: nombre; }
     .home__testimony .home__testimony-container .home__testimony-container--img {
-      height: 8rem;
+      height: 7rem;
       grid-area: foto; }
       .home__testimony .home__testimony-container .home__testimony-container--img img {
         height: 100%;
@@ -297,10 +298,13 @@ html {
         object-fit: contain; }
     .home__testimony .home__testimony-container h4 {
       font-size: .8rem;
-      padding: .3rem;
-      grid-area: cargo; }
+      padding: .2rem;
+      grid-area: cargo;
+      font-weight: bold;
+      font-style: oblique;
+      background: radial-gradient(circle, #d7dae6 0%, #9b97ab 98%); }
     .home__testimony .home__testimony-container p {
-      font-size: .7rem;
+      font-size: .7em;
       padding: 0px .3rem .3rem .3rem;
       grid-area: test; }
 
@@ -384,74 +388,77 @@ html {
 
 /*----------FIN ESTILOS PAGE PROGRAMAS DE ESTUDIO-----------*/
 /*----------ESTILOS PAGE CONTACTO-----------*/
-.body_contact {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh; }
-  .body_contact .contact__main {
-    margin-top: 1rem;
-    display: grid;
-    grid-template-rows: auto repeat(2, 1fr);
-    grid-template-columns: 0.9fr;
+.body_contact .contact__main {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  row-gap: 1rem; }
+  @media screen and (min-width: 1024px) {
+    .body_contact .contact__main {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "titulo titulo" "form mapa"; } }
+  .body_contact .contact__main .contact__tittle {
+    height: 3rem;
+    grid-area: titulo;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    row-gap: 1rem;
-    padding: 1rem; }
-    @media screen and (min-width: 1024px) {
-      .body_contact .contact__main {
-        grid-template-rows: auto 1fr;
-        grid-template-columns: repeat(2, 0.8fr);
-        grid-template-areas: "titulo titulo" "form mapa"; } }
-    .body_contact .contact__main .contact__tittle {
-      grid-area: titulo; }
-      .body_contact .contact__main .contact__tittle h2 {
-        font-size: 1.2rem;
-        text-align: center;
-        margin-bottom: 2rem; }
-    .body_contact .contact__main .contact__form {
-      background-color: bisque;
+    align-items: center; }
+    .body_contact .contact__main .contact__tittle h2 {
+      font-size: 1.2rem; }
+  .body_contact .contact__main .contact__form {
+    width: 80%;
+    background-color: bisque;
+    padding: .5rem;
+    border-radius: 1rem;
+    background: #adbbf2;
+    background: linear-gradient(90deg, #adbbf2 0%, #6b6886 98%);
+    grid-area: form; }
+    .body_contact .contact__main .contact__form .labels-inputs {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-items: center; }
+      .body_contact .contact__main .contact__form .labels-inputs p {
+        margin: .5rem 0px;
+        font-size: .8rem; }
+      .body_contact .contact__main .contact__form .labels-inputs input {
+        font-size: .8rem;
+        border: 1px solid gray;
+        border-radius: 5px; }
+      .body_contact .contact__main .contact__form .labels-inputs textarea {
+        height: 3rem;
+        border: 1px solid gray;
+        border-radius: 5px;
+        resize: none; }
+    .body_contact .contact__main .contact__form .btns {
       padding: .5rem;
-      border-radius: 1rem;
-      background: #adbbf2;
-      background: linear-gradient(90deg, #adbbf2 0%, #6b6886 98%);
-      grid-area: form; }
-      .body_contact .contact__main .contact__form .labels-inputs {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        justify-items: center; }
-        .body_contact .contact__main .contact__form .labels-inputs p {
-          margin-top: 1rem;
-          font-size: 1.2rem; }
-        .body_contact .contact__main .contact__form .labels-inputs input {
-          font-size: 1rem;
-          border: 1px solid gray;
-          border-radius: 5px; }
-        .body_contact .contact__main .contact__form .labels-inputs textarea {
-          height: 3rem;
-          border: 1px solid gray;
-          border-radius: 5px;
-          resize: none; }
-      .body_contact .contact__main .contact__form .btns {
-        padding: 1rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around; }
-        .body_contact .contact__main .contact__form .btns input {
-          width: 6rem;
-          font-size: .9rem;
-          padding: .2rem;
-          border-radius: 5px; }
-          .body_contact .contact__main .contact__form .btns input:hover {
-            background-color: #a19f9f; }
-    .body_contact .contact__main .contact__address {
-      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; }
+      .body_contact .contact__main .contact__form .btns input {
+        width: 5rem;
+        font-size: .6rem;
+        padding: .2rem;
+        border-radius: 5px; }
+        .body_contact .contact__main .contact__form .btns input:hover {
+          background-color: #a19f9f;
+          font-weight: bold; }
+  .body_contact .contact__main .contact__address {
+    height: 100%;
+    width: 80%;
+    text-align: center;
+    grid-area: mapa; }
+    .body_contact .contact__main .contact__address iframe {
       height: 100%;
-      text-align: center;
-      grid-area: mapa; }
-      .body_contact .contact__main .contact__address iframe {
-        width: 90%;
-        height: 100%; }
+      width: 100%;
+      margin-bottom: 1rem; }
 
 /*----------FIN ESTILOS PAGE CONTACTO-----------*/
 /*----------ESTILOS PAGE ALUMNO-----------*/

@@ -1,42 +1,49 @@
 .body_contact{
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
 
     .contact__main{
-        margin-top: 1rem;
-        display: grid;
-        grid-template-rows: auto repeat(2,1fr);
-        grid-template-columns: 0.9fr;
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: auto;
         justify-content: center;
+        justify-items: center;
         align-items: center;
+        margin-bottom: 1rem;
         row-gap: 1rem;
-        padding: 1rem;
 
         @media screen and (min-width: 1024px) {
-            grid-template-rows: auto 1fr;
-            grid-template-columns: repeat(2,0.8fr);
-            grid-template-areas:  
-            "titulo titulo"
-            "form mapa";
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-areas:
+                "titulo titulo"
+                "form mapa";
         }
 
         .contact__tittle{
+            height: 3rem;
             grid-area: titulo;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             h2{
-                @include SubTittileh2;
-
+                font-size: 1.2rem;
             }
         }
 
         .contact__form{
+            width: 80%;
             background-color: bisque;
             padding: .5rem;
             border-radius: 1rem;
             background: rgb(173,187,242);
             background: linear-gradient(90deg, rgba(173,187,242,1) 0%, rgba(107,104,134,1) 98%);
             grid-area: form;
+
+            @media screen and (min-width: 667px) {
+                
+            }
 
             .labels-inputs{
                 display: flex;
@@ -45,13 +52,13 @@
                 justify-items: center;
 
                 p{
-                    margin-top: 1rem;
-                    font-size: 1.2rem;
+                    margin: .5rem 0px;
+                    font-size: .8rem;
                 }
 
 
                 input{
-                    font-size: 1rem;
+                    font-size: .8rem;
                     border: 1px solid gray;
                     border-radius: 5px;
                 }
@@ -67,19 +74,20 @@
 
 
             .btns{
-                padding: 1rem;
+                padding: .5rem;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
 
                 input{
-                    width: 6rem;
-                    font-size: .9rem;
+                    width: 5rem;
+                    font-size: .6rem;
                     padding: .2rem;
                     border-radius: 5px;
-
+                    
                     &:hover{
                         background-color: rgb(161, 159, 159);
+                        font-weight: bold;
                     }
                 }
                 
@@ -88,14 +96,19 @@
         }
 
         .contact__address{
-            width: 100%;
             height: 100%;
+            width: 80%;
             text-align: center;
             grid-area: mapa;
+            
+            @media screen and (min-width: 667px) {
+                
+            }
 
             iframe{
-                width: 90%;
                 height: 100%;
+                width: 100%;
+                margin-bottom: 1rem;
             }
             
         }
