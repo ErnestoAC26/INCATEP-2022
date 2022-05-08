@@ -58,9 +58,10 @@
 
 
                 input{
-                    font-size: .8rem;
+                    font-size: .7rem;
                     border: 1px solid gray;
                     border-radius: 5px;
+                    padding: 0px 5px 0px 5px;
                 }
 
                 textarea{
@@ -68,6 +69,8 @@
                     border: 1px solid gray;
                     border-radius: 5px;
                     resize: none;
+                    font-size: .7rem;
+                    padding: 0px 5px 0px 5px;
                 }
 
             }
