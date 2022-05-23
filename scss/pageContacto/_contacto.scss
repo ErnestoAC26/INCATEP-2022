@@ -9,11 +9,11 @@
         justify-content: center;
         justify-items: center;
         align-items: center;
-        margin-bottom: 1rem;
         row-gap: 1rem;
 
         @media screen and (min-width: 1024px) {
             display: grid;
+            padding: 1rem;
             grid-template-columns: repeat(2,1fr);
             grid-template-areas:
                 "titulo titulo"
@@ -29,6 +29,7 @@
 
             h2{
                 font-size: 1.2rem;
+                margin: 0 auto;
             }
         }
 
@@ -41,19 +42,18 @@
             background: linear-gradient(90deg, rgba(173,187,242,1) 0%, rgba(107,104,134,1) 98%);
             grid-area: form;
 
-            @media screen and (min-width: 667px) {
-                
-            }
 
             .labels-inputs{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 justify-items: center;
+                
 
                 p{
-                    margin: .5rem 0px;
+                    margin: .5rem .5rem;
                     font-size: .8rem;
+                    
                 }
 
 
@@ -61,7 +61,8 @@
                     font-size: .7rem;
                     border: 1px solid gray;
                     border-radius: 5px;
-                    padding: 0px 5px 0px 5px;
+                    padding: .4rem 5px;
+                    margin: 0px 0.5rem;
                 }
 
                 textarea{
@@ -71,6 +72,7 @@
                     resize: none;
                     font-size: .7rem;
                     padding: 0px 5px 0px 5px;
+                    margin: 0px .5rem;
                 }
 
             }
@@ -81,6 +83,7 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
+                margin: .5rem;
 
                 input{
                     width: 5rem;
@@ -104,15 +107,13 @@
             text-align: center;
             grid-area: mapa;
             
-            @media screen and (min-width: 667px) {
-                
-            }
 
             iframe{
                 height: 100%;
                 width: 100%;
                 margin-bottom: 1rem;
             }
+            
             
         }
 

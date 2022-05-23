@@ -18,20 +18,20 @@ header{
     font-family: 'Vibur', cursive;
     font-family: 'Abel', sans-serif;
     opacity: .95;
-    max-width: 100%;
-
+    height: 100%;
+    width: 100%;
+    
 }
 /*fin estilos body*/
 
 /*inicio Estilos form*/
 .main__login{
-    height: 100%;
-    max-width: 100%;
+    height:70vh;
+    width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    align-content: center;
-}
+    justify-content: center;
+}   
 
 .form__login{
     width: 90%;
@@ -44,7 +44,7 @@ header{
 
 
     @media screen and (min-width: 576px){
-        width: 20rem;
+        width: 18rem;
         
     }
 
@@ -62,13 +62,14 @@ header{
         align-items: center;
 
         header{
-            text-align: center;
             width: 100%;
             height: 100%;
-
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             img{
-                height: 3rem;
-                margin-bottom: .1rem;
+                width: 3rem;
             }
 
         }
@@ -82,13 +83,13 @@ header{
         align-items: center;
 
         .container-field-text{
-            height: 2.2rem;
+            height: 2rem;
             width: 90%;
             display: flex;
             margin: .3rem 0px;
             
             .input-item{
-                width: 10%;
+                width: 9%;
                 height: 100%;
                 left: 0;
                 background: #fff;
@@ -97,6 +98,7 @@ header{
                 display: flex;
                 align-items: center;
                 justify-content: center;
+               
             }
 
             #eye{
@@ -112,7 +114,7 @@ header{
         .form-input{
             width: 90%;
             height: 100%;
-            font-size: 1rem;
+            font-size: .9rem;
             font-family: 'Abel', sans-serif;
             color: #5E6472;
             outline: none;
@@ -132,7 +134,7 @@ header{
         /* display: inline-block; */
         color: $ColorNav;
         width: 90%;
-        height: 2.5rem;
+        height: 2.2rem;
         background: #fff;
         border-radius: 5px;    
         outline: none;
@@ -140,7 +142,7 @@ header{
         cursor: pointer;
         text-align: center;
         transition: all 0.2s linear;    
-        margin: 1rem auto;
+        margin: .7rem auto;
         letter-spacing: 0.05em;
 
         &:hover{

@@ -1,15 +1,23 @@
 /*----------ESTILOS TESTIMONIOS----------*/
 .home__testimony{
-    padding: 1rem;
     width: 100%;
-    margin-bottom: 4rem;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: 2rem repeat(2,auto);
-    grid-template-areas:
-    "titulo titulo";
-    justify-items:center;
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+    margin-bottom: 6rem;
+
+    @media screen and (min-width: 768px){
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 2rem repeat(2,auto);
+        grid-template-areas:
+        "titulo titulo";
+        justify-items:center;
+        row-gap: 2rem;
+    }
 
     h2{
         grid-area: titulo;
@@ -18,25 +26,27 @@
     }
 
     .home__testimony-container{
+        height: 100%;
         justify-content: flex-start;
         display: flex;
         flex-direction: column;
         background: radial-gradient(circle, rgba(215,218,230,1) 0%, rgba(155,151,171,1) 98%);
-        width: 10rem;
-        height: auto;
         text-align: center;
         border-radius: 1rem;
-        padding: .3rem;
-        
+        padding: 1rem 0px;
+        width: 20rem;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 2rem 2rem auto;
+        grid-template-areas:
+            "nombre nombre"
+            "cargo cargo"
+            "foto test";
+
+
         @media screen and (min-width: 768px){
-            width: auto;
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            grid-template-rows: 2rem 2rem auto;
-            grid-template-areas:
-                "nombre nombre"
-                "cargo cargo"
-                "foto test";
+            width: 90%;
         }
 
         @media screen and (min-width: 1024px){
@@ -58,36 +68,40 @@
             font-size: 1rem;
             padding: .3rem;
             grid-area: nombre;
+            margin: 0 auto;
         }
 
-        
-
+    
         .home__testimony-container--img{
-            height: 7rem;
+            height: auto;
             grid-area: foto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             img{
-                height: 100%;
-                width: 100%;
+                height: 8rem;
                 object-fit: contain;
             }
         }
 
         h4{
             font-size: .8rem;
-            padding: .2rem;
             grid-area: cargo;
             font-weight: bold;
             font-style: oblique;
             background: radial-gradient(circle, rgba(215,218,230,1) 0%, rgba(155,151,171,1) 98%);
-
+            margin: 0px;
+            width: 100%;
+            height: 1.5rem;
         }
 
 
         p{
             font-size: .7em;
-            padding: 0px .3rem .3rem .3rem;
-            grid-area:test
+            padding: 0px 1rem;
+            grid-area:test;
+            text-align: justify;
         }
 
 

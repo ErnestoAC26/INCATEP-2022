@@ -104,7 +104,7 @@ html {
 /*----------ESTILOS PROGRAMAS----------*/
 .home__programs {
   width: 100%;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
   height: auto;
   text-align: center; }
   .home__programs h2 {
@@ -152,7 +152,7 @@ html {
 /*--------FIN ESTILOS PROGRAMAS--------*/
 /*----------ESTILOS PORQUE INCATEP----------*/
 .home__reasons {
-  margin-bottom: 4rem; }
+  margin-bottom: 6rem; }
   .home__reasons h2 {
     font-size: 1.2rem;
     text-align: center;
@@ -200,7 +200,7 @@ html {
 .home__MissionVision {
   text-align: center;
   width: 100%;
-  margin-bottom: 4rem; }
+  margin-bottom: 6rem; }
   .home__MissionVision h2 {
     font-size: 1.2rem;
     text-align: center;
@@ -244,37 +244,45 @@ html {
 /*----------FIN ESTILOS MISION VISION----------*/
 /*----------ESTILOS TESTIMONIOS----------*/
 .home__testimony {
-  padding: 1rem;
   width: 100%;
-  margin-bottom: 4rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 2rem repeat(2, auto);
-  grid-template-areas: "titulo titulo";
-  justify-items: center;
-  gap: 1rem; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+  margin-bottom: 6rem; }
+  @media screen and (min-width: 768px) {
+    .home__testimony {
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 2rem repeat(2, auto);
+      grid-template-areas: "titulo titulo";
+      justify-items: center;
+      row-gap: 2rem; } }
   .home__testimony h2 {
     grid-area: titulo;
     font-size: 1.2rem;
     text-align: center;
     margin-bottom: 2rem; }
   .home__testimony .home__testimony-container {
+    height: 100%;
     justify-content: flex-start;
     display: flex;
     flex-direction: column;
     background: radial-gradient(circle, #d7dae6 0%, #9b97ab 98%);
-    width: 10rem;
-    height: auto;
     text-align: center;
     border-radius: 1rem;
-    padding: .3rem; }
+    padding: 1rem 0px;
+    width: 20rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2rem 2rem auto;
+    grid-template-areas: "nombre nombre" "cargo cargo" "foto test"; }
     @media screen and (min-width: 768px) {
       .home__testimony .home__testimony-container {
-        width: auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 2rem 2rem auto;
-        grid-template-areas: "nombre nombre" "cargo cargo" "foto test"; } }
+        width: 90%; } }
     @media screen and (min-width: 1024px) {
       .home__testimony .home__testimony-container {
         width: 70%; } }
@@ -287,25 +295,31 @@ html {
     .home__testimony .home__testimony-container h3 {
       font-size: 1rem;
       padding: .3rem;
-      grid-area: nombre; }
+      grid-area: nombre;
+      margin: 0 auto; }
     .home__testimony .home__testimony-container .home__testimony-container--img {
-      height: 7rem;
-      grid-area: foto; }
+      height: auto;
+      grid-area: foto;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
       .home__testimony .home__testimony-container .home__testimony-container--img img {
-        height: 100%;
-        width: 100%;
+        height: 8rem;
         object-fit: contain; }
     .home__testimony .home__testimony-container h4 {
       font-size: .8rem;
-      padding: .2rem;
       grid-area: cargo;
       font-weight: bold;
       font-style: oblique;
-      background: radial-gradient(circle, #d7dae6 0%, #9b97ab 98%); }
+      background: radial-gradient(circle, #d7dae6 0%, #9b97ab 98%);
+      margin: 0px;
+      width: 100%;
+      height: 1.5rem; }
     .home__testimony .home__testimony-container p {
       font-size: .7em;
-      padding: 0px .3rem .3rem .3rem;
-      grid-area: test; }
+      padding: 0px 1rem;
+      grid-area: test;
+      text-align: justify; }
 
 /*----------FIN ESTILOS TESTIMONIOS----------*/
 /*----------ESTILOS CONVENIOS----------*/
@@ -412,11 +426,11 @@ html {
   justify-content: center;
   justify-items: center;
   align-items: center;
-  margin-bottom: 1rem;
   row-gap: 1rem; }
   @media screen and (min-width: 1024px) {
     .body_contact .contact__main {
       display: grid;
+      padding: 1rem;
       grid-template-columns: repeat(2, 1fr);
       grid-template-areas: "titulo titulo" "form mapa"; } }
   .body_contact .contact__main .contact__tittle {
@@ -426,7 +440,8 @@ html {
     justify-content: center;
     align-items: center; }
     .body_contact .contact__main .contact__tittle h2 {
-      font-size: 1.2rem; }
+      font-size: 1.2rem;
+      margin: 0 auto; }
   .body_contact .contact__main .contact__form {
     width: 80%;
     background-color: bisque;
@@ -441,25 +456,28 @@ html {
       justify-content: center;
       justify-items: center; }
       .body_contact .contact__main .contact__form .labels-inputs p {
-        margin: .5rem 0px;
+        margin: .5rem .5rem;
         font-size: .8rem; }
       .body_contact .contact__main .contact__form .labels-inputs input {
         font-size: .7rem;
         border: 1px solid gray;
         border-radius: 5px;
-        padding: 0px 5px 0px 5px; }
+        padding: .4rem 5px;
+        margin: 0px 0.5rem; }
       .body_contact .contact__main .contact__form .labels-inputs textarea {
         height: 3rem;
         border: 1px solid gray;
         border-radius: 5px;
         resize: none;
         font-size: .7rem;
-        padding: 0px 5px 0px 5px; }
+        padding: 0px 5px 0px 5px;
+        margin: 0px .5rem; }
     .body_contact .contact__main .contact__form .btns {
       padding: .5rem;
       display: flex;
       flex-direction: row;
-      justify-content: space-around; }
+      justify-content: space-around;
+      margin: .5rem; }
       .body_contact .contact__main .contact__form .btns input {
         width: 5rem;
         font-size: .6rem;
@@ -496,17 +514,17 @@ header h1 {
   font-family: 'Vibur', cursive;
   font-family: 'Abel', sans-serif;
   opacity: .95;
-  max-width: 100%; }
+  height: 100%;
+  width: 100%; }
 
 /*fin estilos body*/
 /*inicio Estilos form*/
 .main__login {
-  height: 100%;
-  max-width: 100%;
+  height: 70vh;
+  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  align-content: center; }
+  justify-content: center; }
 
 .form__login {
   width: 90%;
@@ -518,7 +536,7 @@ header h1 {
   background-image: linear-gradient(-225deg, #E3FDF5 50%, #cfcfcf 50%); }
   @media screen and (min-width: 576px) {
     .form__login {
-      width: 20rem; } }
+      width: 18rem; } }
   .form__login .container-head {
     text-align: center;
     display: -webkit-flex;
@@ -532,12 +550,14 @@ header h1 {
     flex-direction: column;
     align-items: center; }
     .form__login .container-head header {
-      text-align: center;
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
       .form__login .container-head header img {
-        height: 3rem;
-        margin-bottom: .1rem; }
+        width: 3rem; }
   .form__login .container-field {
     width: 100%;
     display: flex;
@@ -545,12 +565,12 @@ header h1 {
     justify-content: center;
     align-items: center; }
     .form__login .container-field .container-field-text {
-      height: 2.2rem;
+      height: 2rem;
       width: 90%;
       display: flex;
       margin: .3rem 0px; }
       .form__login .container-field .container-field-text .input-item {
-        width: 10%;
+        width: 9%;
         height: 100%;
         left: 0;
         background: #fff;
@@ -568,7 +588,7 @@ header h1 {
     .form__login .container-field .form-input {
       width: 90%;
       height: 100%;
-      font-size: 1rem;
+      font-size: .9rem;
       font-family: 'Abel', sans-serif;
       color: #5E6472;
       outline: none;
@@ -582,7 +602,7 @@ header h1 {
     /* display: inline-block; */
     color: #212529;
     width: 90%;
-    height: 2.5rem;
+    height: 2.2rem;
     background: #fff;
     border-radius: 5px;
     outline: none;
@@ -590,7 +610,7 @@ header h1 {
     cursor: pointer;
     text-align: center;
     transition: all 0.2s linear;
-    margin: 1rem auto;
+    margin: .7rem auto;
     letter-spacing: 0.05em; }
     .form__login button:hover {
       transform: translatey(3px);
